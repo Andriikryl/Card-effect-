@@ -115,6 +115,7 @@ body {
   padding: 30px;
   background-color: black;
   border-radius: 20px;
+  position: relative;
 }
 .card:hover::before {
   content: "";
