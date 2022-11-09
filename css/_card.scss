@@ -1,3 +1,16 @@
+
+
+$white: white;
+$black: black;
+
+
+
+
+body{
+    background-color: $black;
+}
+
+
 .box{
     display: flex;
     justify-content: center;
@@ -5,16 +18,94 @@
 
 .card{
     max-width: 400px;
+    padding: 30px;
+    background-color: $black;
+    border-radius: 20px;
+    
+    &:hover{
+            &::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(-45deg, #0974f1 0%, #9fccfa 100% );
+            transform: translate3d(43px, 10px, 0) scale(0.99);
+            filter: blur(20px);
+            opacity: var(0.7);
+            transition: opacity 0.7s;
+            border-radius: inherit;
+}
+            &::after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: inherit;
+            border-radius: inherit;
+}
+    }
+        
     .card__img{
         aspect-ratio: 1/1;
         overflow: hidden;
+        border-radius: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-block-end: 10px;
         img{
             inline-size: 100%;
             block-size: 100%;
             object-fit: cover;
         }
     }
+    .card__titel{
+        color:  $black;
+        font-family: 'Poor Story', cursive;
+        text-transform: uppercase;
+        padding-block-end: 15px;
+    }
+    .card__text{
+        color: $black;
+        font-family: 'Poor Story', cursive;
+        text-transform: uppercase;
+        padding-block-end: 15px;
+    }
+    .card__btn{
+        color: $black;
+        font-family: 'Poor Story', cursive;
+        text-transform: uppercase;
+        background-color: transparent;
+        padding: 20px 30px;
+        cursor: pointer;
+        border: 1px solid $black;
+    }
+}
+
+
+
+.call-to-action-btn {
+    background-color: transparent;
+    font-weight: 400;
+    font-family: "Poppins";
+    cursor: pointer;
+    transition: all 600ms ease;
+}
+
+/* .call-to-action-btn:hover {
+    color: white;
+    background-color: black;
+    transition: all 0.2s;
+} */
+
+.focus {
+    color: $white;
+    background-color: $white;
+    transition: all 600ms ease;
 }
